@@ -1,6 +1,6 @@
 ## Olá, me chamo Heitor Rangel.
 
-Atualmente estou focado em aprofundar meus conhecimentos em Programação.<br>
+Desenvolvedor Python | C# | .NET | Análise e Desenvolvimento de Sistemas | Engenharia Elétrica.<br>
 
 <br>
 
