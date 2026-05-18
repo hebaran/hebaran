@@ -20,14 +20,17 @@ Desenvolvedor Python | C# | .NET | Análise e Desenvolvimento de Sistemas | Enge
 </div> -->
 
 <div align="center">
-  <a href="https://github.com/hebaran">
-    <img height="168em" src="./github-readme-stats/generated/overview.svg"/>
-    <img height="168em" src="./github-readme-stats/generated/top-languages.svg"/>
+  <a href="https://github.com">
+    <img height="400em" src="./github-metrics.svg"/>
   </a>
 </div>
 
 <br>
 
-<div align="left"> 
+<!-- <div align="left"> 
   <a href="https://www.linkedin.com/in/heitor-rangel/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+</div> -->
+
+<div align="left"> 
+  <a href="https://linkedin.com" target="_blank"><img src="https://shields.io" target="_blank"></a> 
 </div>
