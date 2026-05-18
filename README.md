@@ -12,10 +12,17 @@ Desenvolvedor Python | C# | .NET | Análise e Desenvolvimento de Sistemas | Enge
 
 ### 📊 Minhas Estatísticas no GitHub
 
-<div align="center">
+<!-- <div align="center">
   <a href="https://github.com/hebaran">
   <img height="168em" src="https://github-readme-stats.vercel.app/api?username=hebaran&show_icons=true&include_all_commits=true&count_private=true&bg_color=151515&title_color=fff&text_color=9f9f9f&icon_color=79ff97"/>
   <img height="168em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=hebaran&layout=compact&langs_count=7&bg_color=151515&title_color=fff&text_color=9f9f9f"/>
+  </a>
+</div> -->
+
+<div align="center">
+  <a href="https://github.com/hebaran">
+    <img height="168em" src="./github-readme-stats/generated/overview.svg"/>
+    <img height="168em" src="./github-readme-stats/generated/top-languages.svg"/>
   </a>
 </div>
 
