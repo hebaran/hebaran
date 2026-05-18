@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Generate Stats Images
-        uses: anuraghazra/github-readme-stats-action@v1
+        uses: stats-organization/github-readme-stats-action@v1.2.0
         with:
           gh_token: ${{ secrets.GH_TOKEN }}
           # Configurações do seu primeiro cartão (Geral)
