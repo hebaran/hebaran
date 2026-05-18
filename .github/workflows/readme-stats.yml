@@ -1,0 +1,29 @@
+name: GitHub Readme Stats
+
+on:
+  schedule:
+    # Roda automaticamente a cada 12 horas
+    - cron: '0 */12 * * *'
+  workflow_dispatch: # Permite rodar manualmente
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Generate Stats Images
+        uses: anuraghazra/github-readme-stats-action@v1
+        with:
+          gh_token: ${{ secrets.GH_TOKEN }}
+          # Altere para as opções de customização que você usava antes
+          show_icons: true
+          theme: radical 
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@://github.com"
+          git add ./github-readme-stats/*
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update readme stats" && git push)
