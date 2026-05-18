@@ -17,6 +17,7 @@ jobs:
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: America/Sao_Paulo
+          config_padding: 0, 8%
           
           # Ativa o cartão de linguagens avançado
           plugin_languages: yes
