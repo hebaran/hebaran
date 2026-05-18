@@ -19,7 +19,7 @@ Desenvolvedor Python | C# | .NET | Análise e Desenvolvimento de Sistemas | Enge
   </a>
 </div> -->
 
-<div align="center">
+<div align="left">
   <a href="https://github.com">
     <img height="500em" src="./github-metrics.svg"/>
   </a>
