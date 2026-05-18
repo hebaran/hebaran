@@ -2,9 +2,8 @@ name: GitHub Readme Stats
 
 on:
   schedule:
-    # Roda automaticamente a cada 12 horas
     - cron: '0 */12 * * *'
-  workflow_dispatch: # Permite rodar manualmente
+  workflow_dispatch:
 
 jobs:
   update-stats:
@@ -17,13 +16,24 @@ jobs:
         uses: anuraghazra/github-readme-stats-action@v1
         with:
           gh_token: ${{ secrets.GH_TOKEN }}
-          # Altere para as opções de customização que você usava antes
+          # Configurações do seu primeiro cartão (Geral)
           show_icons: true
-          theme: radical 
+          include_all_commits: true
+          count_private: true
+          bg_color: "151515"
+          title_color: "fff"
+          text_color: "9f9f9f"
+          icon_color: "79ff97"
+          # Configurações do seu segundo cartão (Linguagens)
+          langs_layout: compact
+          langs_count: 7
+          langs_bg_color: "151515"
+          langs_title_color: "fff"
+          langs_text_color: "9f9f9f"
 
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@://github.com"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add ./github-readme-stats/*
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update readme stats" && git push)
