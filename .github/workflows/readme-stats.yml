@@ -1,4 +1,4 @@
-name: GitHub Readme Stats
+name: GitHub Metrics
 
 on:
   schedule:
@@ -6,34 +6,20 @@ on:
   workflow_dispatch:
 
 jobs:
-  update-stats:
+  github-metrics:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Generate Stats Images
-        uses: stats-organization/github-readme-stats-action@v1.2.0
+      - name: Generate Metrics
+        uses: lowlighter/metrics@latest
         with:
-          gh_token: ${{ secrets.GH_TOKEN }}
-          # Configurações do seu primeiro cartão (Geral)
-          show_icons: true
-          include_all_commits: true
-          count_private: true
-          bg_color: "151515"
-          title_color: "fff"
-          text_color: "9f9f9f"
-          icon_color: "79ff97"
-          # Configurações do seu segundo cartão (Linguagens)
-          langs_layout: compact
-          langs_count: 7
-          langs_bg_color: "151515"
-          langs_title_color: "fff"
-          langs_text_color: "9f9f9f"
-
-      - name: Commit and Push Changes
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ./github-readme-stats/*
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update readme stats" && git push)
+          token: ${{ secrets.GH_TOKEN }}
+          user: hebaran
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: America/Sao_Paulo
+          
+          # Ativa o cartão de linguagens avançado
+          plugin_languages: yes
+          plugin_languages_sections: most-used
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_limit: 7
